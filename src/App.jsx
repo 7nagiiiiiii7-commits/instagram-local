@@ -4,6 +4,7 @@ import FeedScreen from './screens/FeedScreen.jsx';
 import ProfileScreen from './screens/ProfileScreen.jsx';
 import ComposerScreen from './screens/ComposerScreen.jsx';
 import PostDetail from './screens/PostDetail.jsx';
+import ProfileEditScreen from './screens/ProfileEditScreen.jsx';
 
 export default function App() {
   const { ready, tab, overlay } = useStore();
@@ -21,6 +22,7 @@ export default function App() {
       <TabBar />
       {overlay?.kind === 'composer' && <ComposerScreen />}
       {overlay?.kind === 'postDetail' && <PostDetail id={overlay.id} />}
+      {overlay?.kind === 'editProfile' && <ProfileEditScreen />}
     </div>
   );
 }
