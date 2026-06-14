@@ -93,3 +93,19 @@
 .composer-likes { width: 100%; background: transparent; border: 1px solid var(--ig-border); border-radius: 10px; color: var(--ig-text); padding: 10px; }
 .share-btn { color: var(--ig-accent); font-weight: 700; }
 .share-btn.disabled { opacity: .4; }
+
+.avatar.lg { width: 84px; height: 84px; }
+.profile-head { display: flex; align-items: center; gap: 24px; padding: 16px; }
+.profile-stats { display: flex; gap: 22px; flex: 1; justify-content: space-around; }
+.profile-stats div { display: flex; flex-direction: column; align-items: center; font-size: 13px; }
+.profile-stats b { font-size: 16px; }
+.profile-stats span { color: var(--ig-muted); }
+.profile-bio { padding: 0 16px; }
+.profile-name { font-weight: 600; font-size: 14px; }
+.profile-bio-text { font-size: 13px; color: var(--ig-text); white-space: pre-wrap; }
+.profile-edit { display: block; width: calc(100% - 32px); margin: 14px 16px; padding: 8px; background: var(--ig-elevated); border-radius: 8px; font-weight: 600; font-size: 13px; }
+
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.grid-cell { position: relative; aspect-ratio: 1; background: #111; }
+.grid-img { width: 100%; height: 100%; object-fit: cover; }
+.grid-badge { position: absolute; top: 6px; right: 6px; color: #fff; filter: drop-shadow(0 1px 2px rgba(0,0,0,.6)); }

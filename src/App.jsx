@@ -1,7 +1,9 @@
 import { useStore } from './store/StoreProvider.jsx';
 import TabBar from './components/TabBar.jsx';
 import FeedScreen from './screens/FeedScreen.jsx';
+import ProfileScreen from './screens/ProfileScreen.jsx';
 import ComposerScreen from './screens/ComposerScreen.jsx';
+import PostDetail from './screens/PostDetail.jsx';
 
 export default function App() {
   const { ready, tab, overlay } = useStore();
@@ -11,12 +13,14 @@ export default function App() {
         {!ready ? <div className="loading">…</div> : (
           <>
             {tab === 'home' && <FeedScreen />}
-            {tab !== 'home' && <div className="empty">この画面は準備中（{tab}）</div>}
+            {tab === 'profile' && <ProfileScreen />}
+            {tab !== 'home' && tab !== 'profile' && <div className="empty">この画面は準備中（{tab}）</div>}
           </>
         )}
       </div>
       <TabBar />
       {overlay?.kind === 'composer' && <ComposerScreen />}
+      {overlay?.kind === 'postDetail' && <PostDetail id={overlay.id} />}
     </div>
   );
 }
