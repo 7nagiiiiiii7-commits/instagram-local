@@ -1,0 +1,33 @@
+.app-frame {
+  position: relative;
+  width: 100%;
+  max-width: var(--ig-app-width);
+  margin: 0 auto;
+  height: 100dvh;
+  background: var(--ig-bg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.app-screen { flex: 1; overflow-y: auto; overflow-x: hidden; }
+.loading { display: grid; place-items: center; height: 100%; color: var(--ig-muted); }
+
+.topbar {
+  position: sticky; top: 0; z-index: 5;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 50px; padding: 0 14px;
+  background: var(--ig-bg); border-bottom: 1px solid var(--ig-border);
+}
+.topbar-side { display: flex; align-items: center; gap: 18px; min-width: 40px; }
+.topbar-right { justify-content: flex-end; }
+.topbar-title { font-weight: 700; font-size: 16px; }
+
+.tabbar {
+  display: flex; align-items: center; justify-content: space-around;
+  height: 50px; background: var(--ig-bg); border-top: 1px solid var(--ig-border);
+}
+.tabbar button { display: grid; place-items: center; width: 48px; height: 48px; }
+.tabbar-avatar { display: block; width: 26px; height: 26px; border-radius: 50%; overflow: hidden; border: 1px solid transparent; }
+.tabbar-avatar.active { border-color: var(--ig-text); }
+.tabbar-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.avatar-fallback { display: block; width: 100%; height: 100%; background: linear-gradient(135deg,#555,#999); }
