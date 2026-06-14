@@ -1,0 +1,48 @@
+- generic [ref=e3]:
+  - generic [ref=e43]:
+    - banner [ref=e44]:
+      - generic [ref=e45]: nagi_preview
+    - generic [ref=e49]:
+      - generic [ref=e50]:
+        - generic [ref=e51]: "0"
+        - generic [ref=e52]: 投稿
+      - generic [ref=e53]:
+        - generic [ref=e54]: "0"
+        - generic [ref=e55]: フォロワー
+      - generic [ref=e56]:
+        - generic [ref=e57]: "0"
+        - generic [ref=e58]: フォロー中
+    - generic [ref=e59]:
+      - generic [ref=e60]: Nagi
+      - generic [ref=e85]: ロンドンでワーホリ中📷 建築とコーヒーが好き
+    - button "プロフィールを編集" [ref=e61] [cursor=pointer]
+  - navigation [ref=e6]:
+    - button [ref=e7] [cursor=pointer]:
+      - img [ref=e8]
+    - button [ref=e10] [cursor=pointer]:
+      - img [ref=e11]
+    - button [ref=e14] [cursor=pointer]:
+      - img [ref=e15]
+    - button [ref=e18] [cursor=pointer]:
+      - img [ref=e19]
+    - button [ref=e22] [cursor=pointer]
+  - generic [ref=e86]:
+    - banner [ref=e87]:
+      - button [ref=e89] [cursor=pointer]:
+        - img [ref=e90]
+      - generic [ref=e92]: 新規投稿
+      - button "シェア" [ref=e94] [cursor=pointer]
+    - generic [ref=e95]:
+      - generic [ref=e96]:
+        - button "フィード投稿" [ref=e97] [cursor=pointer]
+        - button "ストーリー" [ref=e98] [cursor=pointer]
+      - generic [ref=e100]: 追加で選ぶ
+      - generic [ref=e103]:
+        - button [ref=e105] [cursor=pointer]:
+          - img [ref=e106]
+        - button [ref=e109] [cursor=pointer]:
+          - img [ref=e110]
+        - button [ref=e113] [cursor=pointer]:
+          - img [ref=e114]
+      - textbox "キャプションを入力…" [ref=e101]
+      - spinbutton [ref=e102]
