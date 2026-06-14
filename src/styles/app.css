@@ -116,3 +116,17 @@
 .field-label { color: var(--ig-muted); font-size: 12px; }
 .field input, .field textarea { background: transparent; border: none; border-bottom: 1px solid var(--ig-border); color: var(--ig-text); padding: 8px 0; font-size: 15px; }
 .field textarea { min-height: 60px; resize: vertical; }
+
+.story-viewer { position: absolute; inset: 0; z-index: 30; background: #000; display: flex; flex-direction: column; }
+.story-bars { display: flex; gap: 4px; padding: 10px 8px 4px; }
+.story-bar { flex: 1; height: 2.5px; background: rgba(255,255,255,.3); border-radius: 2px; overflow: hidden; }
+.story-bar-fill { display: block; height: 100%; background: #fff; }
+.story-top { display: flex; align-items: center; gap: 10px; padding: 6px 12px; position: relative; z-index: 2; }
+.story-user { font-weight: 600; font-size: 13px; }
+.story-close { margin-left: auto; }
+.story-media { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #000; z-index: 0; }
+.story-tap { position: absolute; top: 60px; bottom: 70px; width: 35%; z-index: 1; }
+.story-tap.left { left: 0; }
+.story-tap.right { right: 0; }
+.story-bottom { margin-top: auto; display: flex; align-items: center; gap: 12px; padding: 14px 12px; position: relative; z-index: 2; }
+.story-reply { flex: 1; background: transparent; border: 1px solid rgba(255,255,255,.5); border-radius: 22px; color: #fff; padding: 10px 14px; }

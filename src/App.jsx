@@ -5,6 +5,7 @@ import ProfileScreen from './screens/ProfileScreen.jsx';
 import ComposerScreen from './screens/ComposerScreen.jsx';
 import PostDetail from './screens/PostDetail.jsx';
 import ProfileEditScreen from './screens/ProfileEditScreen.jsx';
+import StoryViewer from './screens/StoryViewer.jsx';
 
 export default function App() {
   const { ready, tab, overlay } = useStore();
@@ -23,6 +24,7 @@ export default function App() {
       {overlay?.kind === 'composer' && <ComposerScreen />}
       {overlay?.kind === 'postDetail' && <PostDetail id={overlay.id} />}
       {overlay?.kind === 'editProfile' && <ProfileEditScreen />}
+      {overlay?.kind === 'story' && <StoryViewer />}
     </div>
   );
 }
