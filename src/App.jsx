@@ -16,7 +16,11 @@ export default function App() {
           <>
             {tab === 'home' && <FeedScreen />}
             {tab === 'profile' && <ProfileScreen />}
-            {tab !== 'home' && tab !== 'profile' && <div className="empty">この画面は準備中（{tab}）</div>}
+            {tab !== 'home' && tab !== 'profile' && (
+              <div className="placeholder-tab">
+                <div className="empty">「{tab === 'search' ? '検索' : 'リール'}」はこのプレビューでは未対応です。<br/>ホーム・プロフィール・＋投稿・ストーリーをお試しください。</div>
+              </div>
+            )}
           </>
         )}
       </div>

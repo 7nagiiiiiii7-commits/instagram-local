@@ -130,3 +130,5 @@
 .story-tap.right { right: 0; }
 .story-bottom { margin-top: auto; display: flex; align-items: center; gap: 12px; padding: 14px 12px; position: relative; z-index: 2; }
 .story-reply { flex: 1; background: transparent; border: 1px solid rgba(255,255,255,.5); border-radius: 22px; color: #fff; padding: 10px 14px; }
+
+.placeholder-tab { display: grid; place-items: center; height: 100%; }
