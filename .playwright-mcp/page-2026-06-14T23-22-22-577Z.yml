@@ -1,0 +1,57 @@
+- generic [ref=e3]:
+  - generic [ref=e267]:
+    - banner [ref=e268]:
+      - generic [ref=e269]: Instagram
+      - generic [ref=e270]:
+        - button [ref=e271] [cursor=pointer]:
+          - img [ref=e272]
+        - button [ref=e274] [cursor=pointer]:
+          - img [ref=e275]
+    - generic [ref=e278]:
+      - button "+ あなた" [ref=e279] [cursor=pointer]:
+        - generic [ref=e282]: +
+        - generic [ref=e283]: あなた
+      - button "ストーリー" [active] [ref=e284] [cursor=pointer]:
+        - generic [ref=e286]: ストーリー
+    - article [ref=e287]:
+      - generic [ref=e288]:
+        - generic [ref=e291]: nagi_preview
+        - button [ref=e292] [cursor=pointer]:
+          - img [ref=e293]
+      - generic [ref=e303]: 1/3
+      - generic [ref=e308]:
+        - generic [ref=e309]:
+          - button [ref=e310] [cursor=pointer]:
+            - img [ref=e311]
+          - button [ref=e313] [cursor=pointer]:
+            - img [ref=e314]
+          - button [ref=e316] [cursor=pointer]:
+            - img [ref=e317]
+        - button [ref=e320] [cursor=pointer]:
+          - img [ref=e321]
+      - generic [ref=e323]: いいね！128件
+      - generic [ref=e324]: "nagi_preview テムズ川沿いの朝さんぽ☕️ #london #architecture"
+      - generic [ref=e325]: 2分前
+  - navigation [ref=e6]:
+    - button [ref=e7] [cursor=pointer]:
+      - img [ref=e8]
+    - button [ref=e10] [cursor=pointer]:
+      - img [ref=e11]
+    - button [ref=e14] [cursor=pointer]:
+      - img [ref=e15]
+    - button [ref=e18] [cursor=pointer]:
+      - img [ref=e19]
+    - button [ref=e22] [cursor=pointer]
+  - generic [ref=e348]:
+    - generic [ref=e352]:
+      - generic [ref=e355]: nagi_preview
+      - button [ref=e356] [cursor=pointer]:
+        - img [ref=e357]
+    - button "前へ" [ref=e359] [cursor=pointer]
+    - button "次へ" [ref=e360] [cursor=pointer]
+    - generic [ref=e361]:
+      - textbox "メッセージを送信" [ref=e362]
+      - button [ref=e363] [cursor=pointer]:
+        - img [ref=e364]
+      - button [ref=e366] [cursor=pointer]:
+        - img [ref=e367]

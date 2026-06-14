@@ -1,0 +1,14 @@
+- generic [ref=e3]:
+  - generic [ref=e110]:
+    - text: 「検索」はこのプレビューでは未対応です。
+    - text: ホーム・プロフィール・＋投稿・ストーリーをお試しください。
+  - navigation [ref=e64]:
+    - button [ref=e65] [cursor=pointer]:
+      - img [ref=e66]
+    - button [active] [ref=e68] [cursor=pointer]:
+      - img [ref=e69]
+    - button [ref=e72] [cursor=pointer]:
+      - img [ref=e73]
+    - button [ref=e76] [cursor=pointer]:
+      - img [ref=e77]
+    - button [ref=e80] [cursor=pointer]

@@ -27,6 +27,11 @@ export default function StoryViewer() {
   };
 
   useEffect(() => {
+    if (!current) setOverlay(null); // 表示するストーリーが無ければ閉じる
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [current]);
+
+  useEffect(() => {
     if (!current || current.media[0]?.kind === 'video') return; // 動画は onEnded で送る
     startRef.current = performance.now();
     const tick = (now) => {
@@ -40,7 +45,7 @@ export default function StoryViewer() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index, current]);
 
-  if (!current) { setOverlay(null); return null; }
+  if (!current) return null;
   const isVideo = current.media[0]?.kind === 'video';
 
   return (
