@@ -31,3 +31,36 @@
 .tabbar-avatar.active { border-color: var(--ig-text); }
 .tabbar-avatar img { width: 100%; height: 100%; object-fit: cover; }
 .avatar-fallback { display: block; width: 100%; height: 100%; background: linear-gradient(135deg,#555,#999); }
+
+.avatar { display: inline-block; border-radius: 50%; overflow: hidden; background: #333; }
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+.avatar.sm { width: 32px; height: 32px; }
+
+.postcard { border-bottom: 1px solid var(--ig-border); padding-bottom: 4px; }
+.postcard-head { display: flex; align-items: center; gap: 10px; padding: 8px 12px; }
+.postcard-user { font-weight: 600; font-size: 13px; }
+.postcard-more { margin-left: auto; }
+
+.carousel { position: relative; }
+.carousel-track {
+  display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.carousel-track::-webkit-scrollbar { display: none; }
+.carousel-slide { flex: 0 0 100%; scroll-snap-align: center; }
+.post-media { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: #111; }
+.carousel-counter {
+  position: absolute; top: 10px; right: 10px;
+  background: rgba(0,0,0,.6); color:#fff; font-size: 12px;
+  padding: 2px 8px; border-radius: 12px;
+}
+.carousel-dots { position: absolute; bottom: 10px; left: 0; right: 0; display: flex; justify-content: center; gap: 4px; }
+.carousel-dots .dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.4); }
+.carousel-dots .dot.active { background: var(--ig-accent); }
+
+.postcard-actions { display: flex; align-items: center; padding: 8px 12px; }
+.postcard-actions .left { display: flex; gap: 14px; }
+.postcard-actions .right { margin-left: auto; }
+.postcard-likes { padding: 0 12px; font-weight: 600; font-size: 13px; }
+.postcard-caption { padding: 4px 12px 0; font-size: 13px; line-height: 1.4; }
+.postcard-time { padding: 4px 12px 0; color: var(--ig-muted); font-size: 11px; text-transform: uppercase; }
