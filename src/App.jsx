@@ -6,6 +6,8 @@ import ComposerScreen from './screens/ComposerScreen.jsx';
 import PostDetail from './screens/PostDetail.jsx';
 import ProfileEditScreen from './screens/ProfileEditScreen.jsx';
 import StoryViewer from './screens/StoryViewer.jsx';
+import ReelsScreen from './screens/ReelsScreen.jsx';
+import ExploreScreen from './screens/ExploreScreen.jsx';
 
 export default function App() {
   const { ready, tab, overlay } = useStore();
@@ -16,11 +18,8 @@ export default function App() {
           <>
             {tab === 'home' && <FeedScreen />}
             {tab === 'profile' && <ProfileScreen />}
-            {tab !== 'home' && tab !== 'profile' && (
-              <div className="placeholder-tab">
-                <div className="empty">「{tab === 'search' ? '検索' : 'リール'}」はこのプレビューでは未対応です。<br/>ホーム・プロフィール・＋投稿・ストーリーをお試しください。</div>
-              </div>
-            )}
+            {tab === 'reels' && <ReelsScreen />}
+            {tab === 'search' && <ExploreScreen />}
           </>
         )}
       </div>

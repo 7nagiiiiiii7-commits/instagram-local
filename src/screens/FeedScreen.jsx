@@ -5,8 +5,10 @@ import PostCard from '../components/PostCard.jsx';
 import { HeartIcon, ShareIcon } from '../components/icons.jsx';
 
 export default function FeedScreen() {
-  const { posts, setOverlay } = useStore();
-  const feed = posts.filter((p) => p.type === 'feed');
+  const { posts, seed, demoMode, setOverlay } = useStore();
+  const own = posts.filter((p) => p.type === 'feed');
+  const demo = (demoMode && seed) ? seed.feed : [];
+  const feed = [...own, ...demo].sort((a, b) => b.createdAt - a.createdAt);
 
   return (
     <div>

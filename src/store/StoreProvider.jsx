@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState, useCallback } from 'react';
 import * as db from '../db/db.js';
+import { buildSeed } from '../data/seed.js';
 
 const StoreContext = createContext(null);
 
@@ -7,6 +8,8 @@ export function StoreProvider({ children }) {
   const [profile, setProfile] = useState(null);
   const [posts, setPosts] = useState([]);
   const [ready, setReady] = useState(false);
+  const [seed, setSeed] = useState(null);
+  const [demoMode, setDemoModeState] = useState(() => localStorage.getItem('demoMode') !== 'off');
 
   // ナビゲーション状態
   const [tab, setTab] = useState('home'); // 'home' | 'search' | 'create' | 'reels' | 'profile'
@@ -19,6 +22,7 @@ export function StoreProvider({ children }) {
       setProfile(await db.getProfile());
       setPosts(await db.getPosts());
       setReady(true);
+      buildSeed().then(setSeed);
     })();
   }, []);
 
@@ -37,11 +41,22 @@ export function StoreProvider({ children }) {
     setProfile(next);
   }, []);
 
+  const setDemoMode = useCallback((on) => {
+    localStorage.setItem('demoMode', on ? 'on' : 'off');
+    setDemoModeState(on);
+  }, []);
+
+  const importPosts = useCallback(async (list) => {
+    await db.addPosts(list);
+    setPosts(await db.getPosts());
+  }, []);
+
   const value = {
     profile, posts, ready,
     tab, setTab,
     overlay, setOverlay,
     addPost, removePost, updateProfile,
+    seed, demoMode, setDemoMode, importPosts,
   };
   return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;
 }
