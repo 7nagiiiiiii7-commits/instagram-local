@@ -69,6 +69,17 @@ export async function deletePost(id) {
   await reqToPromise(store(db, 'posts', 'readwrite').delete(id));
 }
 
+export async function addPosts(list) {
+  const db = await openDB();
+  const tx = db.transaction('posts', 'readwrite');
+  const st = tx.objectStore('posts');
+  for (const p of list) st.put(p);
+  return new Promise((resolve, reject) => {
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+  });
+}
+
 export async function clearAll() {
   dbPromise = null;
   const db = await openDB();
