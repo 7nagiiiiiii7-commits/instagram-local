@@ -132,3 +132,19 @@
 .story-reply { flex: 1; background: transparent; border: 1px solid rgba(255,255,255,.5); border-radius: 22px; color: #fff; padding: 10px 14px; }
 
 .placeholder-tab { display: grid; place-items: center; height: 100%; }
+
+.reels { height: 100%; overflow-y: auto; scroll-snap-type: y mandatory; background: #000; }
+.reel { position: relative; height: 100%; scroll-snap-align: start; background-size: cover; background-position: center; display: flex; }
+.reel-shade { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.55), transparent 35%); }
+.reel-rail { position: absolute; right: 10px; bottom: 90px; display: flex; flex-direction: column; gap: 18px; z-index: 2; }
+.reel-rail button { display: flex; flex-direction: column; align-items: center; gap: 4px; color: #fff; font-size: 11px; }
+.reel-meta { position: absolute; left: 14px; right: 70px; bottom: 80px; z-index: 2; color: #fff; }
+.reel-user { display: flex; align-items: center; gap: 8px; }
+.reel-follow { border: 1px solid rgba(255,255,255,.7); border-radius: 6px; padding: 2px 8px; font-size: 12px; }
+.reel-caption { margin-top: 8px; font-size: 13px; }
+.reel-audio { margin-top: 6px; font-size: 12px; opacity: .9; }
+
+.explore-search { display: flex; align-items: center; gap: 8px; margin: 10px 12px; padding: 9px 12px; background: var(--ig-elevated); border-radius: 10px; color: var(--ig-muted); font-size: 14px; }
+
+.import-row { display: flex; flex-direction: column; gap: 4px; text-align: center; cursor: pointer; }
+.import-status { color: var(--ig-muted); font-size: 12px; font-weight: 400; }
