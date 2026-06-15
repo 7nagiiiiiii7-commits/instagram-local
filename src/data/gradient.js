@@ -18,6 +18,12 @@ export function gradientBlob(seed, w = 600, h = 750) {
       ctx.fillStyle = `hsla(${(h2 + i * 35) % 360} 80% 62% / .22)`;
       ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
     }
-    canvas.toBlob((b) => resolve(b), 'image/png');
+    // toBlob はページがアイドル（描画フレームが回らない）時にコールバックが発火せず、
+    // リロード直後に Promise が解決しない不具合がある。rAF 非依存の toDataURL → 同期Blob変換にする。
+    const dataUrl = canvas.toDataURL('image/png');
+    const bin = atob(dataUrl.split(',')[1]);
+    const bytes = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    resolve(new Blob([bytes], { type: 'image/png' }));
   });
 }
