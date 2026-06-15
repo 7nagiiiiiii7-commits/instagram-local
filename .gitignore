@@ -5,3 +5,5 @@ dist
 # test/verification artifacts
 .playwright-mcp/
 ig-*.png
+flow*.png
+*-shot*.png
