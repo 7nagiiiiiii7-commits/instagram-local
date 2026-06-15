@@ -16,7 +16,8 @@ function timeAgo(ts) {
 
 export default function PostCard({ post }) {
   const { profile } = useStore();
-  const avatarUrl = useObjectURL(profile?.avatarBlob);
+  const author = post.author || profile;
+  const avatarUrl = useObjectURL(author?.avatarBlob);
   const [liked, setLiked] = useState(false);
   const likeCount = (post.likes || 0) + (liked ? 1 : 0);
 
@@ -24,7 +25,7 @@ export default function PostCard({ post }) {
     <article className="postcard">
       <div className="postcard-head">
         <span className="avatar sm">{avatarUrl ? <img src={avatarUrl} alt="" /> : <span className="avatar-fallback" />}</span>
-        <span className="postcard-user">{profile?.username}</span>
+        <span className="postcard-user">{author?.username}</span>
         <button className="postcard-more"><MoreIcon /></button>
       </div>
 
@@ -44,7 +45,7 @@ export default function PostCard({ post }) {
       {likeCount > 0 && <div className="postcard-likes">いいね！{likeCount.toLocaleString()}件</div>}
       {post.caption && (
         <div className="postcard-caption">
-          <span className="postcard-user">{profile?.username}</span> {post.caption}
+          <span className="postcard-user">{author?.username}</span> {post.caption}
         </div>
       )}
       <div className="postcard-time">{timeAgo(post.createdAt)}</div>
