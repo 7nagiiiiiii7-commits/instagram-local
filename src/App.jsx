@@ -8,6 +8,7 @@ import ProfileEditScreen from './screens/ProfileEditScreen.jsx';
 import StoryViewer from './screens/StoryViewer.jsx';
 import ReelsScreen from './screens/ReelsScreen.jsx';
 import ExploreScreen from './screens/ExploreScreen.jsx';
+import ImportScreen from './screens/ImportScreen.jsx';
 
 export default function App() {
   const { ready, tab, overlay } = useStore();
@@ -28,6 +29,7 @@ export default function App() {
       {overlay?.kind === 'postDetail' && <PostDetail id={overlay.id} />}
       {overlay?.kind === 'editProfile' && <ProfileEditScreen />}
       {overlay?.kind === 'story' && <StoryViewer />}
+      {overlay?.kind === 'import' && <ImportScreen />}
     </div>
   );
 }

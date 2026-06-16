@@ -148,3 +148,13 @@
 
 .import-row { display: flex; flex-direction: column; gap: 4px; text-align: center; cursor: pointer; }
 .import-status { color: var(--ig-muted); font-size: 12px; font-weight: 400; }
+
+.import-guide { gap: 12px; }
+.import-lead { margin: 0; font-size: 13px; line-height: 1.6; color: var(--ig-text); }
+.import-steps { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 9px; }
+.import-steps li { font-size: 13px; line-height: 1.5; color: var(--ig-text); }
+.import-note { font-size: 12px; line-height: 1.55; background: var(--ig-elevated); border-radius: 8px; padding: 10px 12px; }
+.import-note.muted { background: transparent; color: var(--ig-muted); padding: 0 2px; }
+.share-cta { display: block; margin-top: 4px; padding: 12px; text-align: center; background: var(--ig-accent); color: #fff; font-weight: 700; font-size: 14px; border-radius: 10px; cursor: pointer; }
+.share-cta.disabled { opacity: .5; pointer-events: none; }
+.import-status.big { text-align: center; font-size: 13px; color: var(--ig-text); }
